@@ -11,10 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', ['as'=>'home.index', 'uses'=>'HomeController@index']);
 
-});
 
 Route::get('say/{name?}', ['as'=>'hello.index', function ($name='Everybody') {
 
